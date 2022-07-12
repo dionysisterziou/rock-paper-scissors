@@ -13,11 +13,17 @@ function computerPlay() {
     return object;
 }
 
+function capitalize(word) {
+    let firstCharacter = word.charAt(0);
+
+    return word.replace(firstCharacter, firstCharacter.toUpperCase());
+}
+
 const computerSelection = computerPlay();
-const playerSelection = 'Rock';
+const playerSelection = 'rock';
 
 function playRound(playerSelection, computerSelection) {
-    if (playerSelection === 'Rock') {
+    if (capitalize(playerSelection) === 'Rock') {
         if (computerSelection === 'Rock') {
             return `Draw!`;
         } else if (computerSelection === 'Papper') {
@@ -25,7 +31,7 @@ function playRound(playerSelection, computerSelection) {
         } else {
             return `You win!`;
         }
-    } else if (playerSelection === 'Papper') {
+    } else if (capitalize(playerSelection) === 'Papper') {
         if (computerSelection === 'Rock') {
             return `You win!`;
         } else if (computerSelection === 'Papper') {
@@ -33,7 +39,7 @@ function playRound(playerSelection, computerSelection) {
         } else {
             return `You loose!`;
         }
-    } else if (playerSelection === 'Scissors') {
+    } else if (capitalize(playerSelection) === 'Scissors') {
         if (computerSelection === 'Rock') {
             return `You loose!`;
         } else if (computerSelection === 'Papper') {
@@ -46,4 +52,4 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-console.log(playRound(playerSelection, computerSelection));
+console.log(playRound(playerSelection.toLowerCase(), computerSelection));
