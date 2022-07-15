@@ -2,11 +2,12 @@ function game() {
     for (let round = 1; round <= 5; round++) {
         let playerSelection = prompt("Rock, papper or scissors?");
 
-        if (playerSelection === null) {
+        if (playerSelection === null || playerSelection === "") {
             alert(`You must select between: "Rock", "Papper" and "Scissors".`);
             round--;
         }
 
+        console.log(round);
         console.log(playerSelection);
     }
 }
@@ -29,10 +30,12 @@ function computerPlay() {
 }
 
 function capitalize(word) {
-    let firstCharacter = word.charAt(0);
+    let lowerCaseWord = word.toLowerCase();
+    let firstCharacter = lowerCaseWord.charAt(0);
 
-    return word.replace(firstCharacter, firstCharacter.toUpperCase());
+    return lowerCaseWord.replace(firstCharacter, firstCharacter.toUpperCase());
 }
+
 
 const computerSelection = computerPlay();
 
