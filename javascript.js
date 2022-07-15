@@ -5,10 +5,10 @@ function game() {
         if (playerSelection === null || playerSelection === "") {
             alert(`You must select between: "Rock", "Papper" and "Scissors".`);
             round--;
+        } else if (capitalize(playerSelection) !== "Rock" || capitalize(playerSelection) !== "Papper" || capitalize(playerSelection) !== "Scissors") {
+            alert(`Incorrect object! You must select between: "Rock", "Papper" and "Scissors".`);
+            round--;
         }
-
-        console.log(round);
-        console.log(playerSelection);
     }
 }
 
