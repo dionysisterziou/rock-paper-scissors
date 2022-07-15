@@ -1,6 +1,11 @@
 function game() {
-    for (let i = 1; i <= 5; i++) {
+    for (let round = 1; round <= 5; round++) {
         let playerSelection = prompt("Rock, papper or scissors?");
+
+        if (playerSelection === null) {
+            alert(`You must select between: "Rock", "Papper" and "Scissors".`);
+            round--;
+        }
 
         console.log(playerSelection);
     }
