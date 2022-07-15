@@ -1,3 +1,13 @@
+function game() {
+    for (let i = 1; i <= 5; i++) {
+        let playerSelection = prompt("Rock, papper or scissors?");
+
+        console.log(playerSelection);
+    }
+}
+
+game();
+
 function computerPlay() {
     const number = Math.floor(Math.random() * 3) + 1;
     let object;
@@ -20,7 +30,6 @@ function capitalize(word) {
 }
 
 const computerSelection = computerPlay();
-const playerSelection = 'rock';
 
 function playRound(playerSelection, computerSelection) {
     if (capitalize(playerSelection) === 'Rock') {
@@ -52,4 +61,3 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-console.log(playRound(playerSelection.toLowerCase(), computerSelection));
