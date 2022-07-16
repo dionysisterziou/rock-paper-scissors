@@ -1,12 +1,14 @@
 function game() {
-    for (let round = 1; round <= 5; round++) {
-        let playerSelection = prompt("Rock, papper or scissors?");
-
+    for (let round = 1; round <= 1; round++) {
+        let playerSelection = capitalize(prompt("Rock, papper or scissors?"));
+        
         if (playerSelection === null || playerSelection === "") {
-            alert(`You must select between: "Rock", "Papper" and "Scissors".`);
+            alert(`You must select between: "Rock", "Papper" or "Scissors".`);
             round--;
-        } else if (capitalize(playerSelection) !== "Rock" || capitalize(playerSelection) !== "Papper" || capitalize(playerSelection) !== "Scissors") {
-            alert(`Incorrect object! You must select between: "Rock", "Papper" and "Scissors".`);
+        } else if (playerSelection === "Rock" || playerSelection === "Papper" || playerSelection === "Scissors") {
+            alert(`Success!`);
+        } else {
+            alert(`Incorrect object! You must select between: "Rock", "Papper" or "Scissors".`);
             round--;
         }
     }
