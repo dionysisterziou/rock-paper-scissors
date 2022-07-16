@@ -64,8 +64,6 @@ function playRound(playerSelection, computerSelection) {
         } else {
             return `Draw!`;
         }
-    } else {
-        return `You must select one of three: 'Rock', 'Papper' or 'Scissors'.`;
     }
 }
 
