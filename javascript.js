@@ -51,28 +51,24 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function game() {
-    for (let round = 1; round <= 5; round++) {
-        const playerSelection = capitalize(prompt("Rock, papper or scissors?"));
-        const computerSelection = computerPlay();
+    const buttons = document.querySelectorAll('button');
+    const computerSelection = computerPlay();
 
-        if (playerSelection === null || playerSelection === "") {
-            alert(`You must select between: "Rock", "Papper" or "Scissors".`);
-            round--;
-        } else if (playerSelection === "Rock" || playerSelection === "Papper" || playerSelection === "Scissors") {
-            console.log(playRound(playerSelection, computerSelection));
-        } else {
-            alert(`Incorrect object! You must select between: "Rock", "Papper" or "Scissors".`);
-            round--;
-        }
-    }
+    buttons.forEach((button) => {
+        button.addEventListener('click', () => {
+            const playerSelection = capitalize(button.id);
 
-    if (computerWins > playerWins) {
-        console.log(`Computer wins!`);
-    } else if (computerWins < playerWins) {
-        console.log(`Player wins!`);
-    } else {
-        console.log(`It's a draw!`);
-    }
+            playRound(playerSelection, computerSelection);
+        });
+    });
+
+    // if (computerWins > playerWins) {
+    //     console.log(`Computer wins!`);
+    // } else if (computerWins < playerWins) {
+    //     console.log(`Player wins!`);
+    // } else {
+    //     console.log(`It's a draw!`);
+    // }
 }
 
 function capitalize(word) {
