@@ -17,35 +17,47 @@ function computerPlay() {
 }
 
 function playRound(playerSelection, computerSelection) {
+    const div = document.querySelector('#result');
+    const p = document.createElement('p');
+
     if (playerSelection === 'Rock') {
         if (computerSelection === 'Rock') {
-            return `Draw!`;
+            p.textContent = `Draw!`;
+            div.appendChild(p);
         } else if (computerSelection === 'Papper') {
             computerWins = countComputerWins(computerWins);
-            return `You loose!`;
+            p.textContent = `You loose!`;
+            div.appendChild(p);
         } else {
             playerWins = countPlayerWins(playerWins);
-            return `You win!`;
+            p.textContent = `You win!`;
+            div.appendChild(p);
         }
     } else if (playerSelection === 'Papper') {
         if (computerSelection === 'Rock') {
             playerWins = countPlayerWins(playerWins);
-            return `You win!`;
+            p.textContent = `You win!`;
+            div.appendChild(p);
         } else if (computerSelection === 'Papper') {
-            return `Draw!`;
+            p.textContent = `Draw!`;
+            div.appendChild(p);
         } else {
             computerWins = countComputerWins(computerWins);
-            return `You loose!`;
+            p.textContent = `You loose!`;
+            div.appendChild(p);
         }
     } else if (playerSelection === 'Scissors') {
         if (computerSelection === 'Rock') {
             computerWins = countComputerWins(computerWins);
-            return `You loose!`;
+            p.textContent = `You loose!`;
+            div.appendChild(p);
         } else if (computerSelection === 'Papper') {
             playerWins = countPlayerWins(playerWins);
-            return `You win`;
+            p.textContent = `You win`;
+            div.appendChild(p);
         } else {
-            return `Draw!`;
+            p.textContent = `Draw!`;
+            div.appendChild(p);
         }
     }
 }
