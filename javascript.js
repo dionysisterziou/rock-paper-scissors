@@ -57,13 +57,13 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function game() {
-    const buttons = document.querySelectorAll('button');
-    const computerSelection = computerPlay();
+    const buttons = document.querySelectorAll('button');  
 
     buttons.forEach((button) => {
         button.addEventListener('click', () => {
+            const computerSelection = computerPlay(); 
             const playerSelection = capitalize(button.id);
-
+            
             playRound(playerSelection, computerSelection);
             score.textContent = `${computerWins}-${playerWins}`;
 
@@ -81,7 +81,7 @@ function game() {
                 })
             }
         });
-    });    
+    });
 }
 
 
