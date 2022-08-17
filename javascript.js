@@ -49,7 +49,7 @@ function playRound(playerSelection, computerSelection) {
             result.textContent = `You loose!`;
         } else if (computerSelection === 'Papper') {
             playerWins++;
-            result.textContent = `You win`;
+            result.textContent = `You win!`;
         } else {
             result.textContent = `Draw!`;
         }
@@ -63,18 +63,18 @@ function game() {
         button.addEventListener('click', () => {
             const computerSelection = computerPlay(); 
             const playerSelection = capitalize(button.id);
-            
+
             playRound(playerSelection, computerSelection);
             score.textContent = `${computerWins}-${playerWins}`;
 
             if (computerWins === 5) {
-                finalResult.textContent = 'Computer wins!';
+                finalResult.textContent = 'Persians win!';
 
                 buttons.forEach((button) => {
                     button.disabled = true;
                 })
             } else if (playerWins === 5) {
-                finalResult.textContent = 'Player wins!';
+                finalResult.textContent = 'Greeks win!';
 
                 buttons.forEach((button) => {
                     button.disabled = true;
