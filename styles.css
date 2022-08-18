@@ -1,0 +1,17 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+    border: 2px solid red;
+}
+
+body {
+    background-color: #005bae;
+    color: #fff;
+}
+
+h1 {
+    text-align: center;
+}
