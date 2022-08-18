@@ -4,7 +4,7 @@ html {
 
 *, *::before, *::after {
     box-sizing: inherit;
-    border: 2px solid red;
+    /* border: 2px solid red; */
 }
 
 body {
@@ -12,6 +12,32 @@ body {
     color: #fff;
 }
 
+header {
+    border-bottom-style: solid;
+}
+
 h1 {
     text-align: center;
+}
+
+button {
+    background-color: #005bae;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    padding: 15px 32px;
+    font-size: 16px;
+    transition-duration: 0.4s;
+}
+
+button:hover {
+    background-color: #fff;
+    color: #005bae;
+}
+
+button:disabled {
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
 }
