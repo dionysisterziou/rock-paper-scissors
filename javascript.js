@@ -12,7 +12,7 @@ function computerPlay() {
     if (number === 1) {
         object = 'Rock';
     } else if (number === 2) {
-        object = 'Papper';
+        object = 'Paper';
     } else {
         object = 'Scissors';
     }
@@ -26,18 +26,18 @@ function playRound(playerSelection, computerSelection) {
     if (playerSelection === 'Rock') {
         if (computerSelection === 'Rock') {
             result.textContent = `Draw!`;
-        } else if (computerSelection === 'Papper') {
+        } else if (computerSelection === 'Paper') {
             computerWins++;
             result.textContent = `You loose!`;
         } else {
             playerWins++;
             result.textContent = `You win!`;
         }
-    } else if (playerSelection === 'Papper') {
+    } else if (playerSelection === 'Paper') {
         if (computerSelection === 'Rock') {
             playerWins++;
             result.textContent = `You win!`;
-        } else if (computerSelection === 'Papper') {
+        } else if (computerSelection === 'Paper') {
             result.textContent = `Draw!`;
         } else {
             computerWins++;
@@ -47,7 +47,7 @@ function playRound(playerSelection, computerSelection) {
         if (computerSelection === 'Rock') {
             computerWins++;
             result.textContent = `You loose!`;
-        } else if (computerSelection === 'Papper') {
+        } else if (computerSelection === 'Paper') {
             playerWins++;
             result.textContent = `You win!`;
         } else {
