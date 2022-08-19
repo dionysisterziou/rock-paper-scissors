@@ -84,7 +84,7 @@ function game() {
     });
 }
 
-
+// This function is used to capitalize the id of the buttons 
 function capitalize(word) {
     let lowerCaseWord = word.toLowerCase();
     let firstCharacter = lowerCaseWord.charAt(0);
