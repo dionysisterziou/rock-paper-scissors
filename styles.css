@@ -20,20 +20,20 @@ h1 {
 }
 
 button {
-    background-color: #005bae;
-    border: 1px solid #fff;
+    background-color: #fff;
+    border: 1px solid #005bae;
     border-radius: 4px;
-    color: #fff;
+    color: #005bae;
     cursor: pointer;
     padding: 15px 32px;
     font-size: 16px;
     transition-duration: 0.4s;
 }
 
-button:hover {
+/* button:hover {
     background-color: #fff;
     color: #005bae;
-}
+} */
 
 button:disabled {
     background-color: #ccc;
