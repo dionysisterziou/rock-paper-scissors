@@ -64,9 +64,11 @@ button:disabled {
 }
 
 .grid-container {
-    column-gap: 20px;
     display: grid;
+    font-size: 35px;
+    gap: 20px 55px;
     grid-template-columns: auto auto;
+    grid-template-rows: 80px 70px;
 }
 
 .grid-item-1,
@@ -77,4 +79,15 @@ button:disabled {
 .grid-item-2,
 .grid-item-4 {
     text-align: left;
+}
+
+.grid-item-3,
+.grid-item-4,
+#result {
+    margin: 0;
+}
+
+#result,
+#finalResult {
+    font-size: 20px;
 }
