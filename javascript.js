@@ -1,9 +1,11 @@
-const score = document.querySelector('#score');
+const greekScore = document.querySelector('#greekScore');
+const persianScore = document.querySelector('#persianScore');
 const finalResult = document.querySelector('#finalResult');
-let computerWins = 0;
 let playerWins = 0;
+let computerWins = 0;
 
-score.textContent = `${computerWins}-${playerWins}`;
+greekScore.textContent = `${playerWins}`;
+persianScore.textContent = `${computerWins}`;
 
 function computerPlay() {
     const number = Math.floor(Math.random() * 3) + 1;
@@ -57,15 +59,16 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function game() {
-    const buttons = document.querySelectorAll('button');  
+    const buttons = document.querySelectorAll('button');
 
     buttons.forEach((button) => {
         button.addEventListener('click', () => {
-            const computerSelection = computerPlay(); 
+            const computerSelection = computerPlay();
             const playerSelection = capitalize(button.id);
 
             playRound(playerSelection, computerSelection);
-            score.textContent = `${computerWins}-${playerWins}`;
+            greekScore.textContent = `${playerWins}`;
+            persianScore.textContent = `${computerWins}`;
 
             if (computerWins === 5) {
                 finalResult.textContent = 'Persians win!';
@@ -84,7 +87,6 @@ function game() {
     });
 }
 
-// This function is used to capitalize the id of the buttons 
 function capitalize(word) {
     let lowerCaseWord = word.toLowerCase();
     let firstCharacter = lowerCaseWord.charAt(0);

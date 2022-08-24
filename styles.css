@@ -2,7 +2,9 @@ html {
     box-sizing: border-box;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: inherit;
 }
 
@@ -11,13 +13,22 @@ body {
     color: #005bae;
 }
 
-header {
-    border-bottom-style: solid;
+h1 {
+    font-size: 80px;
+    text-align: center;
 }
 
-h1 {
-    font-size: 60px;
+h2,
+p {
     text-align: center;
+}
+
+h2 {
+    font-size: 45px;
+}
+
+span {
+    border-bottom: 1px solid #005bae;
 }
 
 button {
@@ -36,7 +47,7 @@ button {
 .flex-container {
     display: flex;
     justify-content: center;
-    gap: 8px;
+    gap: 35px;
 }
 
 button:hover {
@@ -46,7 +57,24 @@ button:hover {
 
 button:disabled {
     background-color: #ccc;
+    box-shadow: 0 0;
     color: #666;
     cursor: not-allowed;
     top: 0;
+}
+
+.grid-container {
+    column-gap: 20px;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.grid-item-1,
+.grid-item-3 {
+    text-align: right;
+}
+
+.grid-item-2,
+.grid-item-4 {
+    text-align: left;
 }
