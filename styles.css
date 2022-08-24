@@ -31,12 +31,20 @@ button {
     color: #005bae;
     cursor: pointer;
     padding: 15px 32px;
+    position: relative;
     font-size: 16px;
-    transition-duration: 0.4s;
+    top: 0;
+    transition: top ease 0.5s;
+}
+
+button:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    top: -10px;
 }
 
 button:disabled {
     background-color: #ccc;
     color: #666;
     cursor: not-allowed;
+    top: 0;
 }
