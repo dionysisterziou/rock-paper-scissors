@@ -11,6 +11,10 @@ html {
 body {
     background-color: #fff;
     color: #005bae;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
 }
 
 h1 {
@@ -90,4 +94,15 @@ button:disabled {
 #result,
 #finalResult {
     font-size: 20px;
+}
+
+footer {
+    align-items: center;
+    background-color: #66023C;
+    color: #807F03;
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+    min-height: 50px;
+    width: 100%;
 }
