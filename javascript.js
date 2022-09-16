@@ -30,7 +30,7 @@ function playRound(playerSelection, computerSelection) {
             result.textContent = `Draw!`;
         } else if (computerSelection === 'Paper') {
             computerWins++;
-            result.textContent = `You loose!`;
+            result.textContent = `Ksipna Ellina!`;
         } else {
             playerWins++;
             result.textContent = `You win!`;
@@ -43,12 +43,12 @@ function playRound(playerSelection, computerSelection) {
             result.textContent = `Draw!`;
         } else {
             computerWins++;
-            result.textContent = `You loose!`;
+            result.textContent = `Ksipna Ellina!`;
         }
     } else if (playerSelection === 'Scissors') {
         if (computerSelection === 'Rock') {
             computerWins++;
-            result.textContent = `You loose!`;
+            result.textContent = `Ksipna Ellina!`;
         } else if (computerSelection === 'Paper') {
             playerWins++;
             result.textContent = `You win!`;
@@ -71,7 +71,7 @@ function game() {
             persianScore.textContent = `${computerWins}`;
 
             if (computerWins === 5) {
-                finalResult.textContent = 'Persians win!';
+                finalResult.textContent = 'Persians win! The bones of the ancestors tremble!';
 
                 buttons.forEach((button) => {
                     button.disabled = true;
