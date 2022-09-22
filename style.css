@@ -111,6 +111,7 @@ footer {
     width: 100%;
 }
 
+/* Disables Google Translate's pop up box  */
 #gtx-trans {
     display: none;
 }
