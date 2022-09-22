@@ -1,3 +1,7 @@
+:root {
+    font-size: 62.5%
+}
+
 html {
     box-sizing: border-box;
 }
@@ -13,12 +17,13 @@ body {
     color: #005bae;
     display: flex;
     flex-direction: column;
+    font-size: 1.6rem;
     height: 100vh;
     margin: 0;
 }
 
 h1 {
-    font-size: 80px;
+    font-size: 8rem;
     text-align: center;
 }
 
@@ -28,7 +33,7 @@ p {
 }
 
 h2 {
-    font-size: 45px;
+    font-size: 4.5rem;
 }
 
 span {
@@ -43,7 +48,7 @@ button {
     cursor: pointer;
     padding: 15px 32px;
     position: relative;
-    font-size: 16px;
+    font-size: 1.6rem;
     top: 0;
     transition: top ease 0.5s;
 }
@@ -69,7 +74,7 @@ button:disabled {
 
 .grid-container {
     display: grid;
-    font-size: 35px;
+    font-size: 3.5rem;
     gap: 20px 55px;
     grid-template-columns: auto auto;
     grid-template-rows: 80px 70px;
@@ -93,7 +98,7 @@ button:disabled {
 
 #result,
 #finalResult {
-    font-size: 20px;
+    font-size: 2rem;
 }
 
 footer {
