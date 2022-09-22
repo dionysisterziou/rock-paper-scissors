@@ -1,5 +1,5 @@
 :root {
-    font-size: 62.5%
+    font-size: 62.5%;
 }
 
 html {
@@ -18,8 +18,7 @@ body {
     display: flex;
     flex-direction: column;
     font-size: 1.6rem;
-    height: 100vh;
-    margin: 0;
+    height: 100vh;  
 }
 
 h1 {
@@ -92,12 +91,12 @@ button:disabled {
 
 .grid-item-3,
 .grid-item-4,
-#result {
+.result {
     margin: 0;
 }
 
-#result,
-#finalResult {
+.result,
+.finalResult {
     font-size: 2rem;
 }
 

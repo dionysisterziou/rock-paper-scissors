@@ -3,8 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Greeks vs Persians</title>
+    <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="style.css">
+    <title>Greeks vs Persians</title>
     <script src="https://kit.fontawesome.com/743c238473.js" crossorigin="anonymous"></script>
 </head>
 
@@ -23,20 +24,18 @@
             </div>
         </section>
 
-        <section>
-            <div class="grid-container">
-                <p class="grid-item-1">Greeks</p>
-                <p class="grid-item-2">Persians</p>
-                <p class="grid-item-3" id="greekScore"></p>
-                <p class="grid-item-4" id="persianScore"></p>
-            </div>
-            <p id="result"></p>
-        </section>
+        <div class="grid-container">
+            <p class="grid-item-1">Greeks</p>
+            <p class="grid-item-2">Persians</p>
+            <p class="grid-item-3" id="greekScore"></p>
+            <p class="grid-item-4" id="persianScore"></p>
+        </div>
+        <p id="result" class="result"></p>
 
         <section>
             <h2><span>War</span></h2>
             <div>
-                <p id="finalResult"></p>
+                <p id="finalResult" class="finalResult"></p>
             </div>
         </section>
     </main>
