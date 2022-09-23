@@ -17,8 +17,9 @@ body {
     color: #005bae;
     display: flex;
     flex-direction: column;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-size: 1.6rem;
-    height: 100vh;  
+    height: 100vh;
 }
 
 h1 {
